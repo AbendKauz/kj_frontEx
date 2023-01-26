@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 문서 객체 생성
+      const header = document.createElement('h1');
+
+      // 생성한 태그 조각
+      header.textContent = '문서 객체 동적으로 생성';
+      header.setAttribute('data-custom', '사용자 정의 속성');
+      header.style.color = 'white';
+      header.style.backgroundColor = 'black';
+
+      // h1태그를 body태그 아래에 추가
+      document.body.appendChild(header);
+    });
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

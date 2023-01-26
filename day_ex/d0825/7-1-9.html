@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 문서 객체를 읽어들이고 생성
+      const divA = document.querySelector('#first');
+      const divB = document.querySelector('#second');
+      const h1 = document.createElement('h1');
+      h1.textContent = '이동하는 h1 태그';
+
+      // 서로 번갈아가면서 실행하는 함수 구현
+      const toFirst = () => {
+        divA.appendChild(h1);
+        setTimeout(toSecond, 1000);
+      }
+      const toSecond = () => {
+        divB.appendChild(h1);
+        setTimeout(toFirst, 3000);
+      }
+      toFirst();
+
+    });
+  </script>
+</head>
+<body>
+  <div id="first">
+    <h1>첫번째 div 태그 내부</h1>
+  </div>
+  <hr>
+  <div id="second">
+    <h1>두번째 div 태그 내부</h1>
+  </div>
+</body>
+</html>

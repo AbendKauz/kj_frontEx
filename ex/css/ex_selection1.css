@@ -1,0 +1,77 @@
+/* *{
+    color: red;
+} */
+
+/* #header{
+    background-color: red;
+}
+
+#aside{
+    background-color: blue;
+}
+
+#content{
+    background-color: yellow;
+} */
+
+/* .select{
+    color: rgb(0, 255, 0);
+} */
+
+/* input[type]{
+    background-color: yellow;
+} */
+
+/* input[type=text]{
+    background-color: red;
+}
+input[type=password]{
+    background-color: blue;
+} */
+
+/* div p{
+    color: red;
+} */
+/* p[class~=aa]{
+    color: red;
+} */
+
+/* p[class|=aa]{
+    color: yellow;
+} */
+
+/* p[class^=aa]{
+    color: blue;
+} */
+
+/* p[class$=aa]{
+    color: green;
+} */
+
+/* p[class*=aa]{
+    color: purple;
+} */
+
+/* table>tbody>tr>th{
+    color: red;
+} */
+
+/* tr td{
+    color: blue;
+} */
+
+h3~li{
+    background-color: yellow;
+}
+ul li{
+    color: blue;
+}
+
+ul h3,p{
+    color: red;
+}
+
+h3+li{
+    font-weight: bold;
+}
+

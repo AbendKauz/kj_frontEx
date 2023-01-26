@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Selector Basic Page</title>
+    <style>
+        li{ list-style: none;}
+        a{ text-decoration: none; }
+        li > a:first-child { /*li태그의 첫번째 a태그(= li > a)*/
+            background-color: yellow;
+            color: black;
+            font-size: 15px;
+        }
+        li:first-child > a { /*첫번째 li태그의 a태그*/
+            background-color: black;
+            color: yellow;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">광주</a></li>
+        <li><a href="#">서울</a></li>
+        <li><a href="#">대전</a></li>
+        <li><a href="#">대구</a></li>
+        <li><a href="#">인천</a></li>
+        <li><a href="#">제주</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const p = document.querySelector('p');
+            const input = document.querySelector('input');
+            const button = document.querySelector('button');
+
+            // localStorage : 브라우저상에 데이터 저장
+            // (세션이 끝나도 데이터가 지워지지 않음)
+            const savedValue = localStorage.getItem('input');
+            // input으로부터 데이터 호출
+            // -> localStorage.input도 가능함
+            if(savedValue){
+                input.value = savedValue;
+                p.textContent = `이전 실행 때의 마지막 값 : ${savedValue}`;
+            }
+
+            input.addEventListener('keyup', (event) => {
+                const value = event.currentTarget.value;
+                localStorage.setItem('input', value);
+                // input에 데이터 입력
+                // -> localStorage.input = value 도 가능함
+            });
+
+            button.addEventListener('click', (event) => {
+                localStorage.clear();
+                input.value = '';
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- input에 글자 입력 후 재실행 시 
+        p태그에 이전에 입력한 글이 나타남 -->
+    <p></p>
+    <button>지우기</button>
+    <input type="text">
+</body>
+</html>

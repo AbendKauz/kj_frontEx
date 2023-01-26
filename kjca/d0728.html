@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>폼 태그 연습</h1>
+    <!-- 
+    input type text / password
+    <form action="" method="get">
+        <label>아이디 : <input type="text" size="20" maxlength="5"></label>
+        <label>비밀번호 : <input type="password"></label>
+        <input type="submit" value="로그인">
+    </form>
+    -->
+    <!-- <form action="" method="get">
+        <fieldset>
+            <label for="user_id">아이디 : </label>
+            <input type="search" id="user_id" name="yourid" size="10" maxlength="5">
+            <label for="user_pw">비밀번호 : </label>
+            <input type="password" id="user_pw" name="pd" size="10">
+            <input type="submit" value="로그인">
+            <input type="reset" value="취소">
+        </fieldset>
+    </form> -->
+    <form action="" method="post">
+        <fieldset>
+            <legend>배송정보</legend>
+            <ul>
+                <li>
+                    <label for="user_name">이름 : </label>
+                    <input type="text" id="user_name" name="userName">
+                </li>
+                <li>
+                    <label for="user_adress">배송주소 : </label>
+                    <input type="text" id="user_adress" name="userAdress">
+                </li>
+                <li>
+                    <label for="user_email">이메일 : </label>
+                    <input type="email" id="user_email" name="userEmail">
+                </li>
+                <li>
+                    <label for="user_tel">연락처 : </label>
+                    <input type="tel" id="user_tel" name="userTel">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+</html>

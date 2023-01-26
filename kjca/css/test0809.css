@@ -1,0 +1,47 @@
+/* h1{
+    color: blue;
+}
+
+h1{
+    color: blueviolet;
+}
+
+h1{
+    color: red;
+} */
+
+/* h1{
+    color: blue;
+}
+
+#color{
+    color: blueviolet;
+}
+
+.txtcolor{
+    color: red;
+} */
+
+h1{
+    color: blue;
+}
+
+h1:hover{
+    color: green;
+}
+
+h1:active{
+    color: red;
+}
+
+input:enabled{
+    background-color: aqua;
+}
+
+input:disabled{
+    background-color: red;
+}
+
+input:focus{
+    background-color: blue;
+}

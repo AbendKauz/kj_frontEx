@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>블록태그</h1>
+    <!-- 
+        block속성의 p태그 안에 inline속성의
+        span 태그를 넣어도 변화가 없음
+            => 오히려 error 가능성 생김
+    -->
+    <p>이것은<span>무엇일까?</span></p>
+    <!--
+        inline속성의 span태그 안에 block속성의
+        h2태그를 넣어서 줄바꿈처리
+    -->
+    <span>이것은<h2>span</h2></span>
+    <span>이것도 span</span>
+    <form>
+        <!-- 
+            inline속성의 input태그를 block속성의 
+            p태그 안에 넣어서 강제 block형으로 만듬
+                => 자주 사용
+        -->
+        <p><input type="text"></p> 
+        <input type="text">
+    </form>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+
+      // // 사용자로부터 숫자를 입력받아 cm를 inch단위로 변환하여 출력
+      // // 1cm는 0.393701inch로 변환 가능
+      // 
+      // const num = prompt("숫자입력");
+      // const inch = 0.393701;
+      // console.log(`${num}cm는 ${num * inch}inch 입니다.`);
+
+
+      // // 사용자로부터 원의 반지름을 입력받아 원의 넓이와 둘레를 구하는 프로그램
+      // // 넓이 = 3.14 * 반지름 * 반지름
+      // // 둘레 = 2 * 3.14 * 반지름
+      // 
+      // const num = prompt("원의 반지름 입력");
+      // const r = 3.14;
+      // console.log(`원의 반지름 = ${num}`);
+      // console.log(`원의 넓이 = ${r * num * num}`);
+      // console.log(`원의 둘레 = ${2 * r * num}`);
+
+
+      // 현재 환율을 기반으로 사용자에게 숫자를 입력받아 달러(USD)에서 원화(KRW)로 환율을 변환하는 프로그램
+      // 환율 : 1달러 = 1207원
+
+      // const doller = prompt("달러 단위의 금액을 입력해주세요.");
+      // console.log(`달러 : ${doller}`);
+      // const won = doller * 1207;
+      // console.log(`→ 원화 : ${won}`);
+
+      // 입력받아 처리하는 프로그램 구현
+      const a = prompt("첫번째 숫자 입력");  // string
+      // prompt로 받은 값은 string으로 저장됨
+      const b = prompt("두번째 숫자 입력");  // string
+      const add = Number(a) + Number(b);
+      // └→ a + b = string + string = 문자열 연결 연산으로 됨
+      // -> 숫자타입으로 변환 후 계산
+      const min = a - b;
+      const mul = a * b;
+      const div = a / b;
+      console.log(`${a} + ${b} = ${add}`);
+      console.log(`${a} - ${b} = ${min}`);
+      console.log(`${a} * ${b} = ${mul}`);
+      console.log(`${a} / ${b} = ${div}`);
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

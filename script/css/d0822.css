@@ -1,0 +1,10 @@
+body{
+  margin: 10px auto;
+}
+h1{
+  width: 400px;
+  height: 200px;
+  line-height: 200px;
+  margin: auto;
+  text-align: center;
+}

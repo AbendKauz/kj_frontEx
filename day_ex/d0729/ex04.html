@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <fieldset>
+            <legend><h1>글 작성하기</h1></legend>
+            <table>
+                <tr>
+                    <th>
+                        <label for="userName">작성자</label>
+                    </th>
+                    <td>
+                        <input type="text" id="userName" name="uName">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="userId">아이디</label>
+                    </th>
+                    <td>
+                        <input type="text" id="userId" name="uId">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="userEmail">이메일</label>
+                    </th>
+                    <td>
+                        <input type="text" id="userEmail1" name="uMail">@
+                        <input type="text" id="userEmail2" name="uMail">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="userPhone1">휴대폰</label>
+                    </th>
+                    <td>
+                        <select id="userPhone1">
+                            <option value="010">010</option>
+                            <option value="011">011</option>
+                            <option value="012">012</option>
+                            <option value="016">016</option>
+                            <option value="017">017</option>
+                            <option value="018">018</option>
+                        </select>
+                        <input type="text" id="userPhone2" ame="uPhone"> -
+                        <input type="text" id="userPhone3" name="uPhone">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="userTitle">글제목</label>
+                    </th>
+                    <td>
+                        <input type="text" id="userTitle" name="uTitle">
+                    </td>
+                </tr>
+                <tr>
+                    <th rowspan="2">
+                        <label for="userText">내용</label>
+                    </th>
+                    <td>
+                        <textarea id="userText" cols="30" rows="10"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="제출">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>

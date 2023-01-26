@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!-- <script>
+    // DOMContentLoaded 이벤트 연결
+    // -> 문서 객체를 모두 읽어들이면(DOMContentLoaded) 이 콜백함수가 실행
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      // let h1 = (text) => `<h1>${text}</h1>`;
+      // document.body.innerHTML += h1('스크립트 내용');
+      // document.body.innerHTML += '<h1>스크립트 내용</h1>';
+      // innerHTML : HTML로 해석해서 표시
+
+      // document.body.innerText += '<h1>스크립트 내용</h1>';
+      // innerText : 텍스트로 표시
+
+
+      // let aa = document.querySelector('h1');
+      // // h1태그 이름으로 요소 하나만 선택
+      
+      // aa.textContent = '광주광역시';
+      // aa.style.color = 'white';
+      // aa.style.backgroundColor = 'black';
+      // aa.style.padding = '10px';
+      // // 첫h1태그만 해당요소가 입력되고 나머지는 입력 안됨
+
+      // let arr = document.querySelectorAll('h1');
+      // // h1 태그 이름으로 요소 전체 선택
+
+      // arr.forEach((v) => {
+      // v.textContent = '광주광역시';
+      // v.style.color = 'white';
+      // v.style.backgroundColor = 'black';
+      // v.style.padding = '10px';
+      // });
+
+
+      // const a = document.querySelector('#a');
+      // const b = document.querySelector('#b');
+
+      // a.textContent = '<h1>textContent 속성</h1>';
+      // // textContent : 글자 그대로 기입
+      // b.innerHTML = '<h1>innerHTML 속성</h1>';
+      // // innerHTML : HTML형식으로 기입
+
+
+      // const rects = document.querySelectorAll('.rect');
+
+      // rects.forEach((rect, index) => {
+      //  const width = (index + 1) * 100;
+      //  // index 0의 너비 = 100
+      //  // index 1의 너비 = 200
+      //  const src = `http://placekitten.com/${width}/250`;
+      //  rect.setAttribute('src', src);
+      //  // src속성에 값을 지정
+      // });
+      
+
+      // const header = document.createElement('h1');  // h1태그 생성
+
+      // // 생성한 태그 조작하기
+      // header.textContent = '문서 객체 동적으로 생성하기';
+      // header.setAttribute('data-custom', '사용자 정의 속성');
+      // header.style.color = 'white';
+      // header.style.backgroundColor = 'black';
+
+      // // h1 태그를 body 태그 아래에 추가하기
+      // document.body.appendChild(header);
+
+
+      // const divA = document.querySelector('#first');
+      // // id속성이 first인 태그 선택
+      // const divB = document.querySelector('#second');
+      // // id속성이 second인 태그 선택
+      // const h1 = document.createElement('h1');
+      // // h1 태그를 새로 생성
+      // h1.textContent = '이동하는 h1태그';
+
+      // const toFirst = () => {
+      //   divA.appendChild(h1); // h1을 divA 자식으로 추가
+      //   setTimeout(toSecond, 1000);
+      //   // 1초 뒤에 toSecond 함수 실행
+      // }
+
+      // const toSecond = () => {
+      //   divB.appendChild(h1); // h1을 divB 자식으로 추가
+      //   setTimeout(toFirst, 3000);
+      //   // 3초 뒤에 toSecond 함수 실행
+      // }
+
+      // toFirst();
+
+
+      // setTimeout(() => {
+      //   const h1 = document.querySelector('h1');
+
+      //   h1.parentNode.removeChild(h1);
+      //   // h1태그의 부모 객체 body 태그에 접근하여 제거
+
+      //   // document.body.removeChild(h1);
+      //   // h1.parentNode가 document.body이므로,
+      //   // 이런 형태로도 제거할 수 있음
+      // }, 3000);
+
+    });
+  </script> -->
+
+  <!-- <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let counter = 0;
+      const h1 = document.querySelector('h1');
+
+      h1.addEventListener('click', () => {
+        counter++;
+        h1.textContent = `클릭 횟수 : ${counter}`;
+      });
+    });
+  </script>
+  <style>
+    h1{
+      /* 클릭을 여러 번 했을 때
+      글자가 선택되는 것을 막기 위한 스타일 */
+      user-select: none;
+      /* 글자가 블럭지정되는 것을 막음 */
+    }
+  </style> -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let counter = 0;
+      let isConnect = false;
+
+      const h1 = document.querySelector('h1');
+      const p = document.querySelector('p');
+      const connectButton = document.querySelector('#connect');
+      const disconnectButton = document.querySelector('#disconnect');
+
+      // 이벤트를 제거하려면 이벤트리스너를 변수 또는 상수로
+      // 가지고 있어야 함
+      const listener = (event) => {
+        h1.textContent = `클릭 횟수 : ${counter++}`;
+      }
+
+      connectButton.addEventListener('click', () => {
+        if(isConnect === false){
+          h1.addEventListener('click', listener);
+          p.textContent = '이벤트 연결 상태 : 연결';
+          isConnect = true;
+        }
+      });
+      
+      disconnectButton.addEventListener('click', () => {
+        if(isConnect === true){
+          h1.removeEventListener('click', listener);
+          // 해제할 때 이벤트 리스너를 사용
+          p.textContent = '이벤트 연결상태 : 해제';
+          isConnect = false;
+        }
+      });
+    });
+  </script>
+  <style>
+    h1{
+      /* 클릭을 여러 번 했을 때
+      글자가 선택되는 것을 막기 위한 스타일 */
+      user-select: none;
+    }
+  </style>
+
+</head>
+<body>
+  <!-- <h1 style="color: red">body 내용</h1> -->
+
+  <!-- <h1></h1>
+  <h1></h1>
+  <h1></h1>
+  <h1></h1>
+  <h1></h1> -->
+
+  <!-- <div id="a"></div>
+  <div id="b"></div> -->
+
+  <!-- <img class="rect">
+  <img class="rect">
+  <img class="rect">
+  <img class="rect">
+  <img class="rect">
+  <img class="rect"> -->
+
+  <!-- <div id="first">
+    <h1>첫번째 div태그</h1>
+  </div>
+  <hr>
+  <div id="second">
+    <h1>두번째 div태그</h1>
+  </div> -->
+
+  <!-- <hr>
+  <h1>제거 대상 문서 객체</h1>
+  <hr> -->
+
+  <!-- <h1>클릭 횟수 : 0</h1> -->
+
+  <h1>클릭 횟수 : 0</h1>
+  <button id="connect">이벤트 연결</button>
+  <button id="disconnect">이벤트 제거</button>
+  <p>이벤트 연결 상태 : 해제</p>
+
+</body>
+</html>

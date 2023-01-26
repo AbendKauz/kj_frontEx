@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const select = document.querySelector('select');
+        const p = document.querySelector('p');
+
+        select.addEventListener('change', (event) => {
+            const options = event.currentTarget.options;
+            const list = [];
+            for(const option of options){
+                if(option.selected){    // selected 속성을 확인
+                    list.push(option.textContent);
+                }
+            }
+            p.textContent = `선택 : ${list.join(',')}`;
+        });
+    });
+    </script>
+</head>
+<body>
+    <select multiple>
+        <!-- select태그의 multiple
+            : 사용자가 두 개 이상의 옵션을 동시에 선택가능하게 함
+            - ctrl or shift키를 사용 -->
+        <option>떡볶이</option>
+        <option>순대</option>
+        <option>오뎅</option>
+        <option>튀김</option>
+    </select>
+    <p></p>
+</body>
+</html>

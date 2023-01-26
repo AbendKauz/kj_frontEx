@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const imgs = document.querySelectorAll('img');
+
+            imgs.forEach((img) => {
+                img.addEventListener('contentmenu', (event) => {
+                    event.preventDefault();
+                    // preventDefault(event) 
+                    // event 객체 -> 기본적으로 실행되는 이벤트가 존재함
+                    //  => 이벤트의 (있을지도 모르는)기본 동작을 실행하지 않도록 지정
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <img src="http://placekitten.com/300/300" alt="">
+</body>
+</html>

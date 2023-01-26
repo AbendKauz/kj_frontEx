@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Window 객체</title>
+</head>
+<body onload="openPopup()">
+  <p>문서를 열면 팝업 창이 표시됩니다.</p>
+  <script>
+    let blocked = false;
+    function openPopup(){
+      let newWin = window.open("notice.html", "pop", "width=500, height=400");
+      if(newWin == null){
+        alert("팝업이 차단되어 있습니다. 팝업 차단을 해제해 주세요.");
+      }
+      newWin.moveBy(100, 100);
+      // 실행될 때 마다 x축 100, y축 100만큼 이동되어 표시
+    }
+  </script>
+</body>
+</html>

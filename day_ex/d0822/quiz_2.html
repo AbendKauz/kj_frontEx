@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>현재 시간 보기</title>
+  <style>
+    #container{
+      width: 200px;
+      margin: 50px auto;
+    }
+    button{
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 20px 30px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <button id="bttn">현재 시간 보기</button>
+  </div>
+  <script>
+    document.getElementById('bttn').onclick = displayTime;
+    function displayTime(){
+      // math.ceil() : 주어진 숫자보다 크거나 같은 숫자 중 가장 작은 숫자를 integet로 반환
+      // window.screen.width : 화면의 가로길이를 css픽셀로 반환
+      // window.screen.height : 화면의 세로길이를 css픽셀로 반환
+      let le = Math.ceil((window.screen.width - 500) / 2);
+      let to = Math.ceil((window.screen.height - 400) / 2);
+      // window.open()메서드를 사용해서 current.html 파일을 팝업창으로 표시하세요.
+      // 팝업 창은 화면 중앙에 표시합니다.
+      window.open("current.html", "팝업", "width=500, height=400, top=" + to + ", left=" + le);
+    }
+  </script>
+</body>
+</html>

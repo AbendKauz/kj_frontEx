@@ -1,0 +1,9 @@
+#kim{
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  text-align: center;
+  margin: auto;
+}

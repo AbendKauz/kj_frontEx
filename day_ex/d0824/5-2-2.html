@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    // 함수 선언
+    function callThreeTimes(callback){
+      for(let i = 0; i < 3; i++){
+        callback(i);
+      }
+    }
+
+    callThreeTimes (function (i){
+      console.log(`${i}번째 함수 호출`);
+    });
+    // 0번째 함수 호출
+    // 1번째 함수 호출
+    // 2번째 함수 호출
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,46 @@
+.container{
+    width: 100%;
+    overflow: hidden;
+}
+
+.book-img{
+    width: 30%;
+    height: 230px;
+    float: left;
+}
+
+.book-desc{
+    width: 70%;
+    float: left;
+}
+
+h1{
+    font-size: 17px;
+}
+
+p{
+    font-size: 16px;
+}
+
+.book-desc > p:last-child{
+    clear: both;
+    width: 100%;
+    position: relative;
+    /* left: -200px; */
+    float: left;
+}
+
+.accent{
+    color: red;
+    font-weight: bold;
+}
+
+a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: red;
+    background-color: yellow;
+}
